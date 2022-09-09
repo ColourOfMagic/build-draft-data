@@ -1,8 +1,15 @@
-package tool
+package builder
+
+import builder.utils.DataPathHelper
+import builder.utils.OutPathHelper
 
 fun main(args: Array<String>) {
-    App().run(args.settings)
+    initialize(args)
+    App().run()
 }
 
-internal val Array<String>.settings: String
-    get() = first().trim()
+private fun initialize(args: Array<String>) {
+    val directory = args[0]
+    DataPathHelper.initialize(directory)
+    OutPathHelper.initialize(directory)
+}

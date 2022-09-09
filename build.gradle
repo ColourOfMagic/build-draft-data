@@ -3,7 +3,7 @@ plugins {
     id 'org.jetbrains.kotlin.jvm' version '1.5.31'
 }
 
-mainClassName = 'tool.MainKt'
+mainClassName = 'builder.MainKt'
 
 group 'org.example'
 version '1.0-SNAPSHOT'

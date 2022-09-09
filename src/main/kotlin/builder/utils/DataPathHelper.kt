@@ -1,13 +1,12 @@
 package builder.utils
 
-object PathHelper {
+object DataPathHelper {
 
-    var startDirectory = ""
+    var dataDirectory = ""
 
-    fun initialize(startDirectory: String) {
-        PathHelper.startDirectory = startDirectory
+    fun initialize(directory: String) {
+        this.dataDirectory = "$directory/data"
     }
 
-    fun filePath(name: String) = "$startDirectory/$name"
-
+    fun filePath(name: String) = "$dataDirectory/$name"
 }
