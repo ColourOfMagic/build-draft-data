@@ -1,0 +1,31 @@
+plugins {
+    id 'application'
+    id 'org.jetbrains.kotlin.jvm' version '1.5.31'
+}
+
+mainClassName = 'tool.MainKt'
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+allprojects {
+    repositories {
+        maven { url 'https://jitpack.io' }
+    }
+}
+
+dependencies {
+    implementation 'org.jetbrains.kotlin:kotlin-stdlib'
+    implementation "com.github.ajalt:mordant:1.2.1"
+    implementation 'com.github.ajalt.clikt:clikt:3.3.0'
+    implementation 'com.github.kotlin-inquirer:kotlin-inquirer:v0.0.2-alpha'
+    implementation 'com.fasterxml.jackson.core:jackson-databind:2.13.0'
+}
+
+test {
+    useJUnitPlatform()
+}
